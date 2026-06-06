@@ -28,4 +28,6 @@
  */
 void SysTick_Handler(void)
 {
+    uint32_t msTicks = port_system_get_millis();
+    port_system_set_millis(msTicks + 1);
 }
